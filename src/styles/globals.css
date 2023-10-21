@@ -1,0 +1,517 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --backgroundC-M : #131217;
+  --backgroundC-S:#0f0d0c;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+html,body,main,*, section{
+  scroll-behavior: smooth;
+  /* overflow: hidden; */
+  
+
+}
+.ia {
+ display: none;
+}
+.ac{
+  position: fixed;
+  bottom: 10%;
+  float: right;
+  right: 3%;
+  z-index: 100;
+}
+.B5ParallaxBg{
+  background-image: url('https://raw.githubusercontent.com/viru2001/SolecthonWebsite/master/images/running-car2.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.5;
+  background-attachment: fixed;
+}
+.TeamBgAnimation{
+  background-color: red; 
+  filter: blur(30px);
+  backdrop-filter: blur(90px);
+  width: 180px; 
+  height: 180px;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: Change 7s infinite linear;
+}
+.TeamBgAnimation2{
+  background-color: yellow; 
+  filter: blur(30px);
+  backdrop-filter: blur(90px);
+  width: 150px; 
+  height: 150px;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: Change2 10s infinite linear;
+}
+
+@keyframes Change {
+  0% {
+    background-color: #ff0000;
+  }
+  100% {
+    background-color: #ec9467;
+  }
+  
+}
+
+@keyframes Change2 {
+  0% {
+    background-color: #ac4dd8;
+  }
+  100% {
+    background-color: #d6ec0a;
+  }
+  
+}
+
+@keyframes LeftToRight {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+  
+}
+.LBorderAnimation{
+  border: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: borderDiscoAnimation 1s infinite linear;
+ 
+
+}
+.LBorderAnimation:hover{
+  border: 1px solid #ff0000;
+  border-radius: 50%;
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+.LBorderAnimation:active{
+  border: 1px solid #ff0000;
+  border-radius: 50%;
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+@keyframes borderDiscoAnimation {
+  0% {
+    border: 1px solid #ff0000;
+    border-radius: 50%;
+    transform: scale(1.1);
+    shadow: 0 0 0.5rem rgba(0, 217, 255, 0.2);
+    box-shadow: rgba(255, 230, 0, 0) 0px 54px 55px, rgb(235, 89, 4) 0px -4px 30px, rgba(0, 4, 255, 0) 0px 4px 6px, rgb(255, 0, 0) 0px 5px 5px, rgb(0, 255, 34) 0px -3px 5px;
+  }
+  100% {
+    border: 1px solid #d9ff00;
+    border-radius: 50%;
+    transform: scale(1.1);
+    shadow: 0 0 0.5rem rgb(0, 217, 255);
+    box-shadow: rgba(255, 230, 0, 0) 0px 54px 55px, rgb(255, 0, 0) 0px 5px 5px, rgba(0, 4, 255, 0) 0px 4px 6px, rgb(235, 89, 4) 0px -4px 30px, rgb(0, 255, 34) 0px -3px 5px;
+    
+  }
+  
+}
+.glass{
+  background: rgba(2, 21, 54, 0.15); 
+  border-radius: 8px;
+  padding: 20px;
+  backdrop-filter: blur(50px);
+  box-shadow: 0 4px 6px rgba(255, 250, 250, 0.1); 
+}
+
+body{
+}
+#light{
+  position: relative;
+  top: 150px;
+}
+#l0{
+
+  position: absolute;
+  animation: lineH 5s 1s infinite linear;
+}
+
+#l1{
+  position: absolute;
+  top: 40px;
+  animation: lineH 5s 0.5s infinite linear;
+}
+#l2{
+  position: absolute;
+  top: 70px;
+  animation: lineH 5s 2s infinite linear;
+}
+#l3{
+  position: absolute;
+  right: 0;
+  top: 100px;
+  animation: lineH 5s 1s infinite linear;
+}
+#l4{
+  position: absolute;
+  top: 130px;
+  animation: lineH 5s 4s infinite linear;
+}
+#l5{
+  position: absolute;
+  right: 0;
+  top: 160px;
+  animation: lineH 4s 1s infinite linear;
+}
+
+@keyframes lineH{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 95%;opacity: 0;
+  }
+}
+
+.flex-col{
+  flex-direction: column;
+}
+.hamburger-s{
+  margin-top: calc(100vh/3);
+  filter: drop-shadow(3px 2px 8px rgba(53, 45, 45, 0.918));
+  cursor: pointer;
+  transition: transform 1.5s ease;
+}
+
+
+
+
+.hamburger-s.active {
+  transform: rotate(180deg);
+  margin-top: calc(100vh/2);
+}
+
+.cursorV{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* display: none; */
+}
+.cv{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffffff00;
+  border: 1px solid #ff0000;
+}
+
+.cv .pointer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  transition: all 0.1s ease-in-out;
+  /* z-index: 100; */
+}
+.cv.active .pointer{
+  width: 20px;
+  height: 20px;
+}
+/* styles.css */
+.cz {
+  position: absolute;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 50%; /* Creates a circular shape */
+  pointer-events: none; /* Allows the cursor to interact with elements below */
+}
+/* styles.css */
+.liquid-effect {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.liquid-effect:hover {
+  transform: scale(1.1); /* Increase the size on hover */
+  opacity: 0.7; /* Adjust opacity on hover */
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+	background-color: #000000;
+  height: 1px;
+}
+ 
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
+	background-color: #000000;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #2f2f31;
+	background-image: -webkit-linear-gradient(90deg,
+	                                          rgb(49, 47, 47) 0%,
+											  rgba(0, 0, 0, 0.589) 25%,
+											  transparent 100%,
+											  rgba(0, 0, 0, 1) 75%,
+											  transparent)
+}
+
+.M-Images img{
+  filter: drop-shadow(3px 2px 8px rgba(53, 45, 45, 0.918));
+}
+.M-Images img:hover{
+  filter: drop-shadow(3px 2px 8px rgba(53, 45, 45, 0.918)) brightness(1.2);
+}
+.M-Images img:hover{
+  filter: scale(1.1);
+}
+
+.FollowCursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px; 
+  background-color: rgba(202, 202, 216, 0); 
+  filter: blur(10px);
+  filter: grayscale(100%);
+  scale: 1.1;
+  border-radius: 50%;
+  pointer-events: none;
+  backdrop-filter: blur(5px); /* Adjust the blur amount as needed */
+  z-index: 100; /* Ensure it's above other elements */
+}
+
+.relative {
+  position: relative;
+}
+.Text_AboutUs{
+  background: linear-gradient(90deg, #ec9467, #ff0000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: blur(0.1px);
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  letter-spacing: 0.1rem;
+  text-shadow: 0 0 0.5rem rgba(0, 217, 255, 0.2);
+  animation: animate 2s linear infinite;
+  margin: 0 10px;
+}
+
+
+.revolving-circle {
+  filter: blur(10px);
+  background-color: aliceblue;
+  width: 80px;
+  height: 80px;
+  border: 10px solid #ae00ff00;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  animation: rotate 4s linear infinite;
+}
+.shiny {
+  color: white;
+  position: relative;
+  border: none;
+  padding: 10px 15px;
+  background: #3984ff;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+}
+.shiny::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--y, 0) * 1px - 50px);
+  left: calc(var(--x, 0) * 1px - 50px);
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(white, #3984ff00 80%);
+
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.shiny:hover::after {
+  opacity: 0.4;
+}
+.B2_LogoI_Center{
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  /* animation: B2LogoIAura 4s linear infinite; */
+}
+@keyframes B2LogoIAura {
+  0% {
+    filter: blur(10px);
+    border: #0000ff solid 10px;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    border: #ff5500 10px double;
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  
+}
+@keyframes rotate {
+  0% {
+    color: aqua;
+    border: #0000ff solid 10px;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    border: #ff5500 10px double;
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--backgroundC-M);
+  cursor: url('/dot.png'), auto;
+}
+
+.bodyS{
+  background: var(--backgroundC-S);
+  color: rgb(var(--foreground-rgb));
+  cursor: url('/dot.png'), auto;
+}
+
+.darksvg{
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 99;
+  background-color: var(#131211);
+  fill: var(--backgroundC-S);
+}
+.line {
+  overflow: hidden;
+  width: 100px;
+  border: none;
+  border-top: 1px solid #504c4c; 
+  animation: animate 2s linear infinite;
+  margin: 0 10px;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+.pointer {
+  
+  cursor: pointer;
+  color: brown;
+
+}
+
+
+.MI{
+position: relative;
+left: 5.5%;
+}
+
+
+.SI{
+--offset:400px;
+--size:250px;
+top: calc(var(--size)/2);
+left:25%;
+width: var(--size);
+position: absolute;
+border-radius: 50%;
+aspect-ratio: 1;
+transform: translate(calc(cos(var(--degress)) * var(--offset)), calc(sin(var(--degress)) * var(--offset)));
+
+
+}
+@media (max-width: 768px) {
+  .MI {
+    width: 300px;
+    height: 300px;
+    margin-top: 180px;
+  }
+  .MITabImage{
+
+    margin-top: 150px;
+  }
+  .SI{
+    --size:200px;
+    --offset:300px;
+    left: 0%;
+  }
+}
+.SI:nth-of-type(1){
+  --degress: 180deg;
+}
+.SI:nth-of-type(2){
+  --degress: 225deg;
+}
+.SI:nth-of-type(3){
+  --degress: 270deg;
+}
+.SI:nth-of-type(4){
+  --degress: 315deg;
+}
+.SI:nth-of-type(5){
+  --degress: 360deg;
+}
+.SI:nth-of-type(6){
+  --degress: 400deg;
+}
+.SI:nth-of-type(7){
+  --degress: 445deg;
+}
+.SI:nth-of-type(8){
+  --degress: 500deg;
+}
+
+
+.M_Container{
+
+}
